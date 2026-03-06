@@ -10,3 +10,9 @@ utt2event
 pretrained_models/
 *.swp
 *.swo
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
