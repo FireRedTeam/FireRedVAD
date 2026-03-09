@@ -7,7 +7,7 @@ Voice Activity Detection & Audio Event Detection
 
 </div>
 
-[[PyPI]](https://pypi.org/project/firered-vad/)
+[[PyPI]](https://pypi.org/project/fireredvad/)
 [[HuggingFace]](https://huggingface.co/FireRedTeam/FireRedVAD)
 [[ModelScope]](https://www.modelscope.cn/models/xukaituo/FireRedVAD)
 
@@ -27,10 +27,10 @@ FireRedVAD supports non-streaming/streaming VAD and non-streaming AED. It suppor
 
 ### Install via pip
 ```bash
-pip install firered-vad
+pip install fireredvad
 
 # With PyTorch (if not already installed)
-pip install firered-vad[gpu]
+pip install fireredvad[gpu]
 ```
 
 ### Setup (from source)
@@ -75,7 +75,7 @@ $ bash inference_aed.sh
 
 
 ### Command-line Usage
-If installed via `pip install firered-vad`, use the `fireredvad` CLI directly:
+If installed via `pip install fireredvad`, use the `fireredvad` CLI directly:
 ```bash
 $ fireredvad --task vad --wav_path assets/hello_zh.wav --model_dir pretrained_models/FireRedVAD/VAD
 # 2026-03-06 17:30:00,086 (param:16) INFO: #param of DetectModel <class 'fireredvad.core.detect_model.DetectModel'> is 588417 = 2.2 MB (float32)
@@ -112,7 +112,7 @@ $ aed.py --use_gpu 0 --model_dir pretrained_models/FireRedVAD/AED --smooth_windo
 
 
 ### Python API Usage
-> If installed via `pip install firered-vad`, no `PYTHONPATH` setup is needed.
+> If installed via `pip install fireredvad`, no `PYTHONPATH` setup is needed.
 > For source installation, set up `PYTHONPATH` first: `export PYTHONPATH=$PWD/:$PYTHONPATH`
 
 #### Non-streaming VAD

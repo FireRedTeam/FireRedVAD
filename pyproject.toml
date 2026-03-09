@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "firered-vad"
-version = "0.0.1"
+name = "fireredvad"
+version = "0.0.2"
 description = "FireRedVAD: A SOTA Industrial-Grade Voice Activity Detection & Audio Event Detection"
 readme = "README.md"
 license = "Apache-2.0"
