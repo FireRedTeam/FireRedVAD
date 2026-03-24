@@ -232,4 +232,11 @@ Now support NCNN for multiplatform, see [runtime](runtime)
   journal={arXiv preprint arXiv:2603.10420},
   year={2026}
 }
+
+@article{xu2025fireredasr,
+  title={FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration},
+  author={Xu, Kai-Tuo and Xie, Feng-Long and Tang, Xu and Hu, Yao},
+  journal={arXiv preprint arXiv:2501.14350},
+  year={2025}
+}
 ```
