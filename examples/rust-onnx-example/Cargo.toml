@@ -1,5 +1,5 @@
 [package]
-name = "rust-wav-processing-with-wavekat-vad"
+name = "rust-onnx-example"
 version = "0.1.0"
 edition = "2021"
 
