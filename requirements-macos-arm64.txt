@@ -1,0 +1,7 @@
+Setuptools<81
+torch==2.1.0
+numpy==1.26.1
+kaldiio==2.18.0
+kaldi_native_fbank==1.21.3
+soundfile==0.12.1
+textgrid
