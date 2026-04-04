@@ -1,0 +1,8 @@
+[package]
+name = "rust-onnx-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wavekat-vad = { version = "0.1", features = ["firered"] }
+hound = "3"
