@@ -14,6 +14,27 @@ FireRedVAD supports non-streaming/streaming VAD and non-streaming AED. It suppor
 - [2026.03.03] We release FireRedVAD as a standalone repository, along with model weights and inference code.
 - [2026.02.12] We release [FireRedASR2S](https://github.com/FireRedTeam/FireRedASR2S) (FireRedASR2-AED, FireRedVAD, FireRedLID, and FireRedPunc) with model weights and inference code.
 
+
+## Evaluation
+
+### FireRedVAD
+
+We evaluate FireRedVAD on FLEURS-VAD-102, a multilingual VAD benchmark covering 102 languages.
+
+FireRedVAD achieves SOTA performance, outperforming Silero-VAD, TEN-VAD, FunASR-VAD, and WebRTC-VAD.
+
+|Metric\Model|FireRedVAD|Silero-VAD|TEN-VAD|FunASR-VAD|WebRTC-VAD|
+|:-------:|:-----:|:------:|:------:|:------:|:------:|
+|AUC-ROC↑  |**99.60**|97.99|97.81|-    |-    |
+|F1 score↑ |**97.57**|95.95|95.19|90.91|52.30|
+|False Alarm Rate↓  |**2.69** |9.41 |15.47|44.03|2.83 |
+|Miss Rate↓|3.62     |3.95 |2.95 |0.42 |64.15|
+
+<sup>*</sup>FLEURS-VAD-102: We randomly selected ~100 audio files per language from [FLEURS test set](https://huggingface.co/datasets/google/fleurs), resulting in 9,443 audio files with manually annotated binary VAD labels (speech=1, silence=0). This VAD testset will be open sourced (coming soon).
+
+Note: FunASR-VAD achieves low Miss Rate but at the cost of high False Alarm Rate (44.03%), indicating over-prediction of speech segments.
+
+
 ## Quick Start
 
 ### Setup
@@ -195,24 +216,6 @@ print(result)
 
 DFSMN-based non-streaming/streaming Voice Activity Detection and Audio Event Detection.
 
-## Evaluation
-
-### FireRedVAD
-
-We evaluate FireRedVAD on FLEURS-VAD-102, a multilingual VAD benchmark covering 102 languages.
-
-FireRedVAD achieves SOTA performance, outperforming Silero-VAD, TEN-VAD, FunASR-VAD, and WebRTC-VAD.
-
-|Metric\Model|FireRedVAD|Silero-VAD|TEN-VAD|FunASR-VAD|WebRTC-VAD|
-|:-------:|:-----:|:------:|:------:|:------:|:------:|
-|AUC-ROC↑  |**99.60**|97.99|97.81|-    |-    |
-|F1 score↑ |**97.57**|95.95|95.19|90.91|52.30|
-|False Alarm Rate↓  |**2.69** |9.41 |15.47|44.03|2.83 |
-|Miss Rate↓|3.62     |3.95 |2.95 |0.42 |64.15|
-
-<sup>*</sup>FLEURS-VAD-102: We randomly selected ~100 audio files per language from [FLEURS test set](https://huggingface.co/datasets/google/fleurs), resulting in 9,443 audio files with manually annotated binary VAD labels (speech=1, silence=0). This VAD testset will be open sourced (coming soon).
-
-Note: FunASR-VAD achieves low Miss Rate but at the cost of high False Alarm Rate (44.03%), indicating over-prediction of speech segments.
 
 ## Runtime
 
